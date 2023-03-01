@@ -2,6 +2,7 @@ import Head from "next/head";
 import Header from "@/components/Header";
 import { Roboto } from "next/font/google";
 import Carrousel from "@/components/Carrousel";
+import PaymentMethods from "@/components/PaymentMethods";
 
 const roboto = Roboto({
   weight: ["100", "300", "400", "500", "700", "900"],
@@ -17,9 +18,13 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Header />
-      <Carrousel />
-      <main className="text-3xl font-bold underline">Hola mundo</main>
+      <main className="bg-gray-100 min-h-screen">
+        <Header />
+        <Carrousel />
+        <div className="mx-40">
+          <PaymentMethods />
+        </div>
+      </main>
     </>
   );
 }

@@ -9,7 +9,7 @@ export default function Carrousel() {
       <Image
         src="/Carrousel.svg"
         alt="Women week"
-        className="object-contain w-full absolute"
+        className="absolute object-contain w-full"
         width={1500}
         height={340}
       />

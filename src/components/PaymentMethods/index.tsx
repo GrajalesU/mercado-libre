@@ -3,7 +3,7 @@ import React from "react";
 
 export default function PaymentMethods() {
   return (
-    <section className="my-10 bg-white flex justify-between rounded shadow-sm">
+    <section className="flex justify-between my-10 bg-white rounded shadow-sm">
       <ul className="flex p-[20.5px] w-full">
         <li className="grow">
           <div className="flex gap-[16.5px] ">
@@ -15,7 +15,7 @@ export default function PaymentMethods() {
             />
             <div className="flex flex-col">
               <span className="text-lg">Hasta 48 horas</span>
-              <span className="text-md text-blue cursor-pointer">Ver más</span>
+              <span className="cursor-pointer text-md text-blue">Ver más</span>
             </div>
           </div>
         </li>
@@ -29,7 +29,7 @@ export default function PaymentMethods() {
             />
             <div className="flex flex-col">
               <span className="text-lg">Transferencia desde tu banco</span>
-              <span className="text-md text-blue cursor-pointer">Ver más</span>
+              <span className="cursor-pointer text-md text-blue">Ver más</span>
             </div>
           </div>
         </li>
@@ -43,7 +43,7 @@ export default function PaymentMethods() {
             />
             <div className="flex flex-col">
               <span className="text-lg">Paga en efectivo</span>
-              <span className="text-md text-blue cursor-pointer">Ver más</span>
+              <span className="cursor-pointer text-md text-blue">Ver más</span>
             </div>
           </div>
         </li>
@@ -52,7 +52,7 @@ export default function PaymentMethods() {
         <Image src="./More.svg" alt="Credit card icon" width={47} height={47} />
         <div className="flex flex-col">
           <span className="text-lg">Más medios de pago</span>
-          <span className="text-md text-blue cursor-pointer">Ver todos</span>
+          <span className="cursor-pointer text-md text-blue">Ver todos</span>
         </div>
       </div>
     </section>

@@ -12,7 +12,7 @@ export default function Search() {
           type="text"
           placeholder="Buscar productos, marcas y más..."
         />
-        <button className="py-2 px-3 border-l border-l-gray-100">
+        <button className="px-3 py-2 border-l border-l-gray-100">
           <Image src="/search.svg" alt="search icon" width={24} height={24} />
         </button>
       </div>

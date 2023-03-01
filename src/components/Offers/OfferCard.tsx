@@ -23,15 +23,21 @@ export default function OfferCard({
       </figure>
       <div className="pt-[10px] px-4 pb-[60px]">
         <div className="flex gap-[11.28px] items-center">
-          <span className="font-normal text-2xl text-black">$ {price}</span>
-          <span className="text-green text-sm">{offer}% OFF</span>
+          <span className="text-2xl font-normal text-black">$ {price}</span>
+          <span className="text-sm text-green">{offer}% OFF</span>
         </div>
-        <div className="flex gap-2 items-center">
+        <div className="flex items-center gap-2">
           {free && (
-            <span className="text-green font-semibold">Envío gratis</span>
+            <span className="font-semibold text-green">Envío gratis</span>
           )}
           {full && (
-            <Image src="/Full.svg" width={40} height={22} alt="full icon" className="py-[0.5px]" />
+            <Image
+              src="/Full.svg"
+              width={40}
+              height={22}
+              alt="full icon"
+              className="py-[0.5px]"
+            />
           )}
         </div>
       </div>

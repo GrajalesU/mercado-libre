@@ -6,6 +6,7 @@ import PaymentMethods from "@/components/PaymentMethods";
 import Offers from "@/components/Offers";
 import Subscribe from "@/components/Subscribe";
 import Benefits from "@/components/Benefits";
+import Discover from "@/components/Discover";
 
 const roboto = Roboto({
   weight: ["100", "300", "400", "500", "700", "900"],
@@ -29,6 +30,7 @@ export default function Home() {
           <Offers />
           <Subscribe />
           <Benefits />
+          <Discover />
         </div>
       </main>
     </>

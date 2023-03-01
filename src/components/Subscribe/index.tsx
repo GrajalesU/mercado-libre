@@ -17,7 +17,7 @@ export default function Subscribe() {
         <span className="text-[17px]">
           Consigue los mejores beneficios en Mercado Libre
         </span>
-        <ul className="flex justify-between mt-8">
+        <ul className="flex justify-between mt-8 mb-2">
           <li>
             <div className="flex items-center gap-4">
               <Image

@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Header from "@/components/Header";
 import { Roboto } from "next/font/google";
+import Carrousel from "@/components/Carrousel";
 
 const roboto = Roboto({
   weight: ["100", "300", "400", "500", "700", "900"],
@@ -17,6 +18,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
+      <Carrousel />
       <main className="text-3xl font-bold underline">Hola mundo</main>
     </>
   );

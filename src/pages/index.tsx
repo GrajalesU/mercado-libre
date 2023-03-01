@@ -3,6 +3,7 @@ import Header from "@/components/Header";
 import { Roboto } from "next/font/google";
 import Carrousel from "@/components/Carrousel";
 import PaymentMethods from "@/components/PaymentMethods";
+import Offers from "@/components/Offers";
 
 const roboto = Roboto({
   weight: ["100", "300", "400", "500", "700", "900"],
@@ -23,6 +24,7 @@ export default function Home() {
         <Carrousel />
         <div className="mx-40">
           <PaymentMethods />
+          <Offers />
         </div>
       </main>
     </>

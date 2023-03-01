@@ -11,7 +11,7 @@ export default function Offers() {
           Ver todas
         </span>
       </div>
-      <ul className="flex gap-4">
+      <ul className="flex gap-5">
         <li>
           <OfferCard
             free

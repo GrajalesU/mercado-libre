@@ -3,7 +3,7 @@ import React from "react";
 
 export default function Discover() {
   return (
-    <section className="mb-[55px]">
+    <section className="mb-20">
       <h2 className="text-gray-300 text-[25px] font-light mb-6">Descubre</h2>
       <ul className="flex justify-between">
         <li>

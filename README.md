@@ -6,7 +6,7 @@ Este proyecto fue creado como entregable para la materia Ingeniería Web. Se tra
 
 El objetivo principal del proyecto es demostrar la capacidad del estudiante para crear una maquetación completa de una página web desde su diseño.
 
-En la actualidad, el proyecto consiste en una maquetación estática de la página de inicio de Mercado Libre, que solo está disponible para desktop con un tamaño de pantalla mayor a 1500px. En el futuro, se espera agregar funcionalidades a la página y hacerla completamente responsive para adaptarse a diferentes tamaños de pantalla.
+En la actualidad, el proyecto consiste en una maquetación estática de la página de inicio de Mercado Libre, que solo está disponible para desktop con un tamaño de pantalla mayor a 1184px. En el futuro, se espera agregar funcionalidades a la página y hacerla completamente responsive para adaptarse a diferentes tamaños de pantalla.
 
 ## Tecnologías utilizadas
 Diseño: 

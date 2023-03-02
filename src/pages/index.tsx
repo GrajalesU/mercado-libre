@@ -10,6 +10,7 @@ import Discover from "@/components/Discover";
 import Shops from "@/components/Shops";
 import Collections from "@/components/Collections";
 import Categories from "@/components/Categories";
+import PaymentAndSecurityInfo from "@/components/PaymentAndSecurityInfo";
 
 const roboto = Roboto({
   weight: ["100", "300", "400", "500", "700", "900"],
@@ -41,6 +42,9 @@ export default function Home() {
         <div className="px-40 bg-gradient-to-b from-[#E6E6E6] to-[#ffffff00]">
           <Collections />
           <Categories />
+        </div>
+        <div className="px-40 bg-white">
+          <PaymentAndSecurityInfo />
         </div>
       </main>
     </>

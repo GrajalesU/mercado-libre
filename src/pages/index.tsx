@@ -30,7 +30,7 @@ export default function Home() {
       <div className={`min-h-screen bg-gray-100 ${roboto.className} font-sans`}>
         <Header />
         <Carrousel />
-        <div className="mx-40">
+        <div className="max-w-[1184px] mx-auto">
           <PaymentMethods />
           <Offers />
           <Subscribe />
@@ -38,14 +38,18 @@ export default function Home() {
           <Discover />
           <Shops />
         </div>
-        <div className="px-40 bg-gradient-to-b from-[#E6E6E6] to-[#ffffff00]">
-          <Collections />
-          <Categories />
+        <div className=" bg-gradient-to-b from-[#E6E6E6] to-[#ffffff00]">
+          <div className="max-w-[1184px] mx-auto">
+            <Collections />
+            <Categories />
+          </div>
         </div>
-        <div className="px-40 bg-white">
-          <PaymentAndSecurityInfo />
-        </div>
+        <div className="bg-white">
+          <div className="max-w-[1184px] mx-auto">
+            <PaymentAndSecurityInfo />
+          </div>
         <Footer />
+        </div>
       </div>
     </>
   );

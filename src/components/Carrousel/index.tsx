@@ -5,11 +5,11 @@ import Selected from "./Selected";
 
 export default function Carrousel() {
   return (
-    <section className="w-full relative min-h-[340px]">
+    <section className="w-full relative h-[340px]">
       <Image
         src="/Carrousel.svg"
         alt="Women week"
-        className="absolute object-contain w-full"
+        className="absolute object-cover h-[340px] w-full"
         width={1500}
         height={340}
       />

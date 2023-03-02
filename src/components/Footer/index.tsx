@@ -3,7 +3,7 @@ import React from "react";
 
 export default function Footer() {
   return (
-    <div className="px-40 pt-4 bg-white border-t border-t-gray-100">
+    <div className="max-w-[1184px] mx-auto pt-4 bg-white border-t border-t-gray-100">
       <footer className="pb-[50px]">
         <div className="border-b border-b-gray-100 pb-3">
           <nav>

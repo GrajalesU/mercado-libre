@@ -29,26 +29,30 @@ export default function Home() {
       </Head>
       <div className={`min-h-screen bg-gray-100 ${roboto.className} font-sans`}>
         <Header />
-        <Carrousel />
-        <div className="max-w-[1184px] mx-auto">
-          <PaymentMethods />
-          <Offers />
-          <Subscribe />
-          <Benefits />
-          <Discover />
-          <Shops />
-        </div>
-        <div className=" bg-gradient-to-b from-[#E6E6E6] to-[#ffffff00]">
+        <main>
+          <Carrousel />
           <div className="max-w-[1184px] mx-auto">
-            <Collections />
-            <Categories />
+            <PaymentMethods />
+            <Offers />
+            <Subscribe />
+            <Benefits />
+            <Discover />
+            <Shops />
           </div>
-        </div>
+          <div className=" bg-gradient-to-b from-[#E6E6E6] to-[#ffffff00]">
+            <div className="max-w-[1184px] mx-auto">
+              <Collections />
+              <Categories />
+            </div>
+          </div>
+          <div className="bg-white">
+            <div className="max-w-[1184px] mx-auto">
+              <PaymentAndSecurityInfo />
+            </div>
+          </div>
+        </main>
         <div className="bg-white">
-          <div className="max-w-[1184px] mx-auto">
-            <PaymentAndSecurityInfo />
-          </div>
-        <Footer />
+          <Footer />
         </div>
       </div>
     </>

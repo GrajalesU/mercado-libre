@@ -7,7 +7,7 @@ export default function Categories() {
       <h2 className="text-gray-300 gap-x-1 gap-y-1 text-[25px] font-light mb-6">
         Categorías populares
       </h2>
-      <ul className="grid grid-rows-2 grid-cols-7">
+      <ul className="grid grid-rows-2 grid-cols-7 rounded overflow-hidden shadow-sm">
         <li>
           <CategoryItem
             src="/categories/categories-1.svg"

@@ -25,7 +25,7 @@ export default function PaymentAndSecurityInfo() {
             <span className="text-blue text-[13px] mt-2">Cómo pagar con Mercado Pago</span>
           </div>
         </li>
-        <div className="w-1 h-[65px] border-l border-l-gray-100" />
+        <div className="w-1 h-[65px] border-l border-l-gray-100 self-center" />
         <li className="grow">
           <div className="text-center flex flex-col items-center">
             <Image
@@ -45,7 +45,7 @@ export default function PaymentAndSecurityInfo() {
             <span className="text-blue text-[13px] mt-2">Conoce más sobre este beneficio</span>
           </div>
         </li>
-        <div className="w-1 h-[65px] border-l border-l-gray-100" />
+        <div className="w-1 h-[65px] border-l border-l-gray-100 self-center" />
         <li className="grow">
           <div className="text-center flex flex-col items-center">
             <Image

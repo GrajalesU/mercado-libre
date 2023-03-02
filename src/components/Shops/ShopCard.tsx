@@ -30,7 +30,7 @@ export default function ShopCard({
         <Image src={srcLogo} alt={`${brand} Logo`} width={80} height={80} />
       </div>
       <div className="flex flex-col items-center gap-5 px-8 pb-5">
-        <h3 className="text-2xl font-semibold cursor-pointer">{brand}</h3>
+        <h3 className="text-2xl text-black font-semibold cursor-pointer">{brand}</h3>
         <ShopItems {...items} />
         <span className="font-semibold text-gray-200 cursor-pointer">
           Ver tienda

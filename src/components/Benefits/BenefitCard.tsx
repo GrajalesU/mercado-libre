@@ -24,18 +24,13 @@ export default function BenefitCard({
     <article className="w-[384px] h-[250px] rounded-md overflow-hidden relative">
       <Image
         src={bgSrc}
-        alt="Disney Plus and Star Plus series"
+        alt={bgAlt}
         width={384}
         height={250}
         className="absolute object-cover"
       />
       <div className="absolute z-10 flex items-center gap-4 bottom-4 left-4">
-        <Image
-          src={logoSrc}
-          width={80}
-          height={80}
-          alt="Disney Plus and Star Plus logo"
-        />
+        <Image src={logoSrc} width={80} height={80} alt={logoAlt} />
         <div className="text-white">
           {freeTier && <span className="text-[11px]">7 DÍAS GRATIS</span>}
           <h3 className="font-semibold">{title}</h3>

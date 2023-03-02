@@ -4,7 +4,7 @@ import OfferCard from "./OfferCard";
 
 export default function Offers() {
   return (
-    <section className="my-[50px]">
+    <section className="mt-[50px] mb-20">
       <div className="flex gap-[16.38px] items-end mb-[22px]">
         <h2 className="text-gray-300 text-[25px] font-light">Ofertas</h2>
         <span className="font-normal text-blue text-[15px] leading-5 mb-[7px] cursor-pointer">

@@ -25,6 +25,8 @@ export default function Subscribe() {
                 alt="Disney Plus Icon"
                 width={72}
                 height={72}
+                className="rounded-[37px] border border-[#EFEFEF]"
+
               />
               <span>Disney+ sin cargos</span>
             </div>
@@ -36,6 +38,7 @@ export default function Subscribe() {
                 alt="Star Plus Icon"
                 width={72}
                 height={72}
+                className="rounded-[37px] border border-[#EFEFEF]"
               />
               <span>Star+ sin cargos</span>
             </div>

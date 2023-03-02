@@ -11,6 +11,7 @@ import Shops from "@/components/Shops";
 import Collections from "@/components/Collections";
 import Categories from "@/components/Categories";
 import PaymentAndSecurityInfo from "@/components/PaymentAndSecurityInfo";
+import Footer from "@/components/Footer";
 
 const roboto = Roboto({
   weight: ["100", "300", "400", "500", "700", "900"],
@@ -26,9 +27,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main
-        className={`min-h-screen bg-gray-100 ${roboto.className} font-sans`}
-      >
+      <div className={`min-h-screen bg-gray-100 ${roboto.className} font-sans`}>
         <Header />
         <Carrousel />
         <div className="mx-40">
@@ -46,7 +45,8 @@ export default function Home() {
         <div className="px-40 bg-white">
           <PaymentAndSecurityInfo />
         </div>
-      </main>
+        <Footer />
+      </div>
     </>
   );
 }

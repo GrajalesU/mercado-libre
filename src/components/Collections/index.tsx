@@ -12,6 +12,8 @@ export default function Collections() {
               className="font-semibold bg-transparent focus:outline-0 appearance-none"
               name="Collections"
               id="Collections"
+              defaultValue={"None"}
+
             >
               <option selected>Supermercado</option>
             </select>

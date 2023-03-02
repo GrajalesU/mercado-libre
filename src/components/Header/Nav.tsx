@@ -13,7 +13,7 @@ export default function Nav() {
               name="Category"
               id="Category"
               className="block bg-yellow focus:outline-0 w-[6rem] cursor-pointer"
-              defaultValue={"Hello World"}
+              defaultValue={"None"}
             >
               <option selected>Categorías</option>
             </select>

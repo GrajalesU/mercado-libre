@@ -45,7 +45,7 @@ export default function Home() {
               <Categories />
             </div>
           </div>
-          <div className="bg-white">
+          <div className="bg-white border-b border-b-gray-100">
             <div className="max-w-[1184px] mx-auto">
               <PaymentAndSecurityInfo />
             </div>

@@ -14,7 +14,7 @@ export default function PaymentMethods() {
               height={47}
             />
             <div className="flex flex-col">
-              <span className="text-lg">Hasta 48 horas</span>
+              <span className="text-lg">Hasta 48 cuotas</span>
               <span className="cursor-pointer text-md text-blue">Ver más</span>
             </div>
           </div>

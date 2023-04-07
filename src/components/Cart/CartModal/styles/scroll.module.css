@@ -1,0 +1,21 @@
+.custom-scroll {
+  overflow-y: scroll;
+  position: relative;
+  box-shadow: 0 0 0 0;
+  -webkit-box-shadow: 0 0 0 0;
+  -moz-box-shadow: 0 0 0 0;
+  -ms-box-shadow: 0 0 0 0;
+  -o-box-shadow: 0 0 0 0;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: none;
+  scrollbar-width: auto;
+  scrollbar-color: #3483fa;
+}
+
+.custom-scroll::-webkit-scrollbar {
+  width: 2px;
+  height: 16px;
+}
+.custom-scroll::-webkit-scrollbar-thumb{
+ background-color: #3483fa;
+}

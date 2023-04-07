@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import CartModal from "./CartModal";
 
 export default function CartButton() {
-  const { items } = useCartContext();
+  const { state: items } = useCartContext();
   const [show, setShow] = useState(false);
 
   const handleOpenModal = () => {

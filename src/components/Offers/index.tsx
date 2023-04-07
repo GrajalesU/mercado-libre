@@ -1,6 +1,7 @@
-import Image from "next/image";
 import React from "react";
 import OfferCard from "./OfferCard";
+import { PRODUCTS } from "@/db/products";
+import WithCardAddition from "../HOC/WithCardAddition";
 
 export default function Offers() {
   return (
@@ -12,42 +13,19 @@ export default function Offers() {
         </span>
       </div>
       <ul className="flex justify-between">
-        <li>
-          <OfferCard
-            free
-            offer={32}
-            price="210.900"
-            src="/offers/offer-1.png"
-          />
-        </li>
-        <li>
-          <OfferCard
-            free
-            full
-            offer={25}
-            price="74.990"
-            src="/offers/offer-2.png"
-          />
-        </li>
-        <li>
-          <OfferCard
-            free
-            offer={50}
-            price="134.950"
-            src="/offers/offer-3.png"
-          />
-        </li>
-        <li>
-          <OfferCard
-            free
-            offer={30}
-            price="149.900"
-            src="/offers/offer-4.png"
-          />
-        </li>
-        <li>
-          <OfferCard full offer={17} price="69.990" src="/offers/offer-5.png" />
-        </li>
+        {PRODUCTS.map((product) => (
+          <li key={`Product_${product.id}`}>
+            <WithCardAddition product={product}>
+              <OfferCard
+                free={!product.deliverPrice}
+                offer={product.offer}
+                full={product.isFull}
+                price={product.priceWithOffer || product.price}
+                src={product.image}
+              />
+            </WithCardAddition>
+          </li>
+        ))}
       </ul>
     </section>
   );

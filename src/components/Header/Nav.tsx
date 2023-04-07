@@ -1,8 +1,8 @@
-import Image from "next/image";
+import CartButton from "../Cart/CartButton";
 
 export default function Nav() {
   return (
-    <div className="flex text-black pb-1 font-normal text-sm items-center gap-[52px]">
+    <div className="flex text-black pb-1 font-normal text-sm items-center gap-[52px] relative">
       <button className="w-[134px] leading-6 text-right">
         Ingresa tu domicilio
       </button>
@@ -27,6 +27,7 @@ export default function Nav() {
         </ul>
       </nav>
       <span className="ml-36">Crea tu cuenta Ingresa Mis compras</span>
+      <CartButton />
     </div>
   );
 }

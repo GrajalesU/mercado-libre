@@ -1,11 +1,5 @@
 import { useCartContext } from "@/context/Cart";
-import React, {
-  Dispatch,
-  LegacyRef,
-  MutableRefObject,
-  SetStateAction,
-  useRef,
-} from "react";
+import React, { Dispatch, SetStateAction, useRef } from "react";
 import CartList from "./CartList";
 import animation from "./styles/animation.module.css";
 import { numberToPrice } from "@/utils/format";
@@ -15,11 +9,10 @@ interface CartModalProps {
 }
 
 export default function CartModal({ show, setShow }: CartModalProps) {
-  const { items } = useCartContext();
+  const { state: items } = useCartContext();
   const modalRef = useRef<HTMLDivElement | null>(null);
 
   const handleCloseModal = () => {
-    //Necesito que medio segundo antes de que se cierre el modal, se añada la clase fade-out-up
     modalRef.current?.classList.add(animation["fade-out-up"]);
     setTimeout(() => {
       setShow(false);
@@ -41,7 +34,9 @@ export default function CartModal({ show, setShow }: CartModalProps) {
             <div className="flex items-center justify-between p-5 rounded-t">
               <div>
                 <h3 className="text-xl font-semibold">Carrito</h3>
-                <h4 className="text-lg">Cantidad de productos: {items.length}</h4>
+                <h4 className="text-lg">
+                  Cantidad de productos: {items.length}
+                </h4>
               </div>
               <button
                 className="p-1 ml-auto bg-transparent border-0 float-right text-3xl leading-none font-semibold outline-none focus:outline-none"

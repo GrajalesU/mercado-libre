@@ -13,11 +13,17 @@ export default function WithCardAddition({
   children,
   product,
 }: WithCardAdditionProps) {
-  const { dispatchCart } = useCartContext();
+  const { dispatchCart, state } = useCartContext();
 
   const handleClick = () => {
-    //TODO: ADD TOAST TO SHOW PRODUCT ADDED
+    const item = state.find((item) => item.id === product.id);
+    if (item?.quantity === product.stock) {
+      toast.error("No hay más stock de este producto");
+      return;
+    }
+
     dispatchCart(addToCart(product));
+    toast.success("Producto agregado al carrito");
   };
 
   return <button onClick={handleClick}>{children}</button>;

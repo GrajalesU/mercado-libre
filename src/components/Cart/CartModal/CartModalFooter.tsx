@@ -16,9 +16,9 @@ export default function CartModalFooter({
 
   return (
     <div className="flex flex-col p-3 rounded-b gap-4 border-t border-gray-100">
-      <div className="mr-2 mb-2 ml-auto text-base">
+      <div className="mr-2 mb-2 ml-auto md:text-base text-sm">
         <h3 className="flex">
-          <span className="mr-auto block">Total </span>
+          <span className="mr-auto  block">Total </span>
           <span className="font-bold block ml-4">
             {numberToPrice(getSubtotal(items))}
           </span>
@@ -37,7 +37,7 @@ export default function CartModalFooter({
         </h3>
       </div>
       <button
-        className="text-red font-bold uppercase px-6 py-2 text-sm border rounded border-red w-1/5 ml-auto mr-1 mb-1"
+        className="text-red font-bold uppercase px-0 py-2 text-xs md:px-6 md:py-2 md:text-sm border rounded border-red w-1/5 ml-auto mr-1 mb-1"
         type="button"
         onClick={handleCloseModal}
       >

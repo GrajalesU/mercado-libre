@@ -9,10 +9,12 @@ import {
 } from "./types";
 import { CartItem } from "@/types/Cart";
 
-export function addToCart(product: Product): {
+type AddToCartAction = {
   type: typeof ADD_TO_CART;
   payload: CartItem;
-} {
+};
+
+export function addToCart(product: Product): AddToCartAction {
   const cartItem: CartItem = {
     id: product.id,
     name: product.name,
@@ -20,6 +22,7 @@ export function addToCart(product: Product): {
     image: product.image,
     offer: product.offer,
     priceWithOffer: product.priceWithOffer,
+    deliverPrice: product.deliverPrice,
     quantity: 1,
   };
 
@@ -29,56 +32,71 @@ export function addToCart(product: Product): {
   };
 }
 
-export function removeFromCart(id: number): {
+type RemoveFromCartAction = {
   type: typeof REMOVE_FROM_CART;
   payload: number;
-} {
+};
+
+export function removeFromCart(id: number): RemoveFromCartAction {
   return {
     type: REMOVE_FROM_CART,
     payload: id,
   };
 }
 
-export function increaseQuantity(id: number): {
+type IncreaseQuantityAction = {
   type: typeof INCREASE_QUANTITY;
   payload: number;
-} {
+};
+
+export function increaseQuantity(id: number): IncreaseQuantityAction {
   return {
     type: INCREASE_QUANTITY,
     payload: id,
   };
 }
 
-export function decreaseQuantity(id: number): {
+type DecreaseQuantityAction = {
   type: typeof DECREASE_QUANTITY;
   payload: number;
-} {
+};
+
+export function decreaseQuantity(id: number): DecreaseQuantityAction {
   return {
     type: DECREASE_QUANTITY,
     payload: id,
   };
 }
 
-export function clearCart(): {
+type ClearCartAction = {
   type: typeof CLEAR_CART;
-} {
+};
+
+export function clearCart(): ClearCartAction {
   return {
     type: CLEAR_CART,
   };
 }
 
-export function setQuantity(
-  id: number,
-  quantity: number
-): {
+type SetQuantityAction = {
   type: typeof SET_QUANTITY;
   payload: {
     id: number;
     quantity: number;
   };
-} {
+};
+
+export function setQuantity(id: number, quantity: number): SetQuantityAction {
   return {
     type: SET_QUANTITY,
     payload: { id, quantity },
   };
 }
+
+export type CartAction =
+  | AddToCartAction
+  | RemoveFromCartAction
+  | IncreaseQuantityAction
+  | DecreaseQuantityAction
+  | ClearCartAction
+  | SetQuantityAction;

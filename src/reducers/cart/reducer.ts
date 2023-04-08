@@ -7,22 +7,9 @@ import {
   REMOVE_FROM_CART,
   SET_QUANTITY,
 } from "./types";
+import { CartAction } from "./actions";
 
 export type CartState = CartItem[];
-
-export type CartAction =
-  | { type: typeof ADD_TO_CART; payload: CartItem }
-  | { type: typeof REMOVE_FROM_CART; payload: number }
-  | { type: typeof INCREASE_QUANTITY; payload: number }
-  | { type: typeof DECREASE_QUANTITY; payload: number }
-  | {
-      type: typeof SET_QUANTITY;
-      payload: {
-        id: number;
-        quantity: number;
-      };
-    }
-  | { type: typeof CLEAR_CART };
 
 export const initialCartState: CartState = [];
 
@@ -32,11 +19,12 @@ export function cartReducer(
 ) {
   switch (action.type) {
     case ADD_TO_CART: {
-      //TODO: Agregar lógica para controlar stock
       const item = action.payload;
+
       const existingItem = state.find(
         (currentItem) => currentItem.id === item.id
       );
+
       if (existingItem) {
         return state.map((item) =>
           item.id === existingItem.id
@@ -44,6 +32,7 @@ export function cartReducer(
             : item
         );
       }
+
       return [...state, item];
     }
 
@@ -55,6 +44,7 @@ export function cartReducer(
     case INCREASE_QUANTITY: {
       const id = action.payload;
       const item = state.find((item) => item.id === id);
+
       if (item) {
         return state.map((item) =>
           item.id === id ? { ...item, quantity: item.quantity + 1 } : item
@@ -66,6 +56,9 @@ export function cartReducer(
     case DECREASE_QUANTITY: {
       const id = action.payload;
       const item = state.find((item) => item.id === id);
+      if (item?.quantity === 1) {
+        return state.filter((item) => item.id !== id);
+      }
       if (item) {
         return state.map((item) =>
           item.id === id ? { ...item, quantity: item.quantity - 1 } : item
@@ -76,6 +69,7 @@ export function cartReducer(
     case SET_QUANTITY: {
       const { id, quantity } = action.payload;
       const item = state.find((item) => item.id === id);
+
       if (item) {
         return state.map((item) =>
           item.id === id ? { ...item, quantity } : item

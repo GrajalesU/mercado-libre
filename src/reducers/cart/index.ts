@@ -1,4 +1,3 @@
-export * from "./actions";
-export * from "./index";
-export * from "./reducer";
-export * from "./types";
+export * from './actions';
+export * from './reducer';
+export * from './types';

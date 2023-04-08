@@ -49,56 +49,68 @@ export default function CartListElement({ item }: { item: CartItem }) {
   };
 
   return (
-    <div className="flex gap-8 items-center border-b border-gray-100 px-2 py-4">
-      <Image src={item.image} alt={item.name} width={50} height={50} />
-      <div className="w-36">
-        <h3 className="font-bold text-lg truncate">{item.name}</h3>
+    <div className="flex flex-wrap gap-8 items-center border-b border-gray-100 px-2 py-4">
+      <div className="flex gap-8 items-center">
+        <Image src={item.image} alt={item.name} width={50} height={50} />
+        <div className="sm:w-full w-[140px] sm:max-w-[210px] md:max-w-[250px] lg:max-w-[300px]">
+          <h3 className="font-bold text-lg truncate">{item.name}</h3>
+        </div>
       </div>
-      <div className="flex gap-2 text-blue text-sm rounded border border-gray-100 p-2">
-        <button onClick={handleDecrease}>-</button>
-        <input
-          className={`text-black w-10 text-lg text-center ${input["appearance-none"]}`}
-          value={item.quantity}
-          min={1}
-          max={product.stock}
-          type="number"
-          step={1}
-          onChange={handleChange}
-        />
-        <button onClick={handleAdd}>+</button>
-      </div>
-      <button onClick={handleDelete}>
-        <Image src="/Delete.svg" width={20} height={20} alt="Eliminar" />
-      </button>
-      <div className="ml-auto flex flex-col">
-        {item.offer && (
-          <div className="flex gap-2 text-xs">
-            <span className="text-green">{item.offer} %</span>
-            <span className="line-through">{numberToPrice(item.price)}</span>
-          </div>
-        )}
-        {item.priceWithOffer ? (
-          <span className="self-end text-lg font-semibold">
-            {numberToPrice(item.priceWithOffer)}
-          </span>
-        ) : (
-          <span className="self-end text-lg font-semibold">
-            {numberToPrice(item.price)}
-          </span>
-        )}
-        {item.deliverPrice && (
-          <div className="flex gap-2">
-            <Image
-              src="/Deliver.svg"
-              alt="Icono de carro de domicilio"
-              width={18}
-              height={18}
+      <div className="flex gap-8 ml-auto">
+        <div className="flex gap-2 md:gap-8 items-center">
+          <div className="flex gap-2 text-blue text-xs md:text-sm rounded border border-gray-100 p-1 md:p-2">
+            <button onClick={handleDecrease}>-</button>
+            <input
+              className={`text-black w-10 text-xs md:text-lg text-center ${input["appearance-none"]}`}
+              value={item.quantity}
+              min={1}
+              max={product.stock}
+              type="number"
+              step={1}
+              onChange={handleChange}
             />
-            <span className="self-end text-sm text-green">
-              {numberToPrice(item.deliverPrice)}
-            </span>
+            <button onClick={handleAdd}>+</button>
           </div>
-        )}
+          <button onClick={handleDelete}>
+            <Image
+              src="/Delete.svg"
+              width={20}
+              height={20}
+              alt="Eliminar"
+              className="w-4 h-4 md:w-5 md:h-5"
+            />
+          </button>
+        </div>
+        <div className="md:ml-auto flex flex-col">
+          {item.offer && (
+            <div className="flex gap-2 text-[10px] md:text-xs">
+              <span className="text-green">{item.offer} %</span>
+              <span className="line-through">{numberToPrice(item.price)}</span>
+            </div>
+          )}
+          {item.priceWithOffer ? (
+            <span className="self-end md:text-lg font-semibold">
+              {numberToPrice(item.priceWithOffer)}
+            </span>
+          ) : (
+            <span className="self-end md:text-lg font-semibold">
+              {numberToPrice(item.price)}
+            </span>
+          )}
+          {item.deliverPrice && (
+            <div className="flex gap-2">
+              <Image
+                src="/Deliver.svg"
+                alt="Icono de carro de domicilio"
+                width={18}
+                height={18}
+              />
+              <span className="self-end text-xs md:text-sm text-green">
+                {numberToPrice(item.deliverPrice)}
+              </span>
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );

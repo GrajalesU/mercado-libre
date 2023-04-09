@@ -58,18 +58,21 @@ export default function CartListElement({ item }: { item: CartItem }) {
       </div>
       <div className="flex gap-8 ml-auto">
         <div className="flex gap-2 md:gap-8 items-center">
-          <div className="flex gap-2 text-blue text-xs md:text-sm rounded border border-gray-100 p-1 md:p-2">
-            <button onClick={handleDecrease}>-</button>
-            <input
-              className={`text-black w-10 text-xs md:text-lg text-center ${input["appearance-none"]}`}
-              value={item.quantity}
-              min={1}
-              max={product.stock}
-              type="number"
-              step={1}
-              onChange={handleChange}
-            />
-            <button onClick={handleAdd}>+</button>
+          <div className="relative">
+            <div className="flex gap-2 text-blue text-xs md:text-sm rounded border border-gray-100 p-1 md:p-2">
+              <button onClick={handleDecrease}>-</button>
+              <input
+                className={`text-black w-10 text-xs md:text-lg text-center ${input["appearance-none"]}`}
+                value={item.quantity}
+                min={1}
+                max={product.stock}
+                type="number"
+                step={1}
+                onChange={handleChange}
+              />
+              <button onClick={handleAdd}>+</button>
+            </div>
+            <small className="absolute text-gray-200 text-center w-full text-[10px]">{product.stock} disponibles</small>
           </div>
           <button onClick={handleDelete}>
             <Image
@@ -81,31 +84,33 @@ export default function CartListElement({ item }: { item: CartItem }) {
             />
           </button>
         </div>
-        <div className="md:ml-auto flex flex-col">
+        <div className="md:ml-auto flex flex-col w-28">
           {item.offer && (
-            <div className="flex gap-2 text-[10px] md:text-xs">
+            <div className="flex gap-2 text-[10px] md:text-xs ml-auto">
               <span className="text-green">{item.offer} %</span>
-              <span className="line-through">{numberToPrice(item.price)}</span>
+              <span className="line-through">
+                {numberToPrice(item.price * item.quantity)}
+              </span>
             </div>
           )}
           {item.priceWithOffer ? (
             <span className="self-end md:text-lg font-semibold">
-              {numberToPrice(item.priceWithOffer)}
+              {numberToPrice(item.priceWithOffer * item.quantity)}
             </span>
           ) : (
             <span className="self-end md:text-lg font-semibold">
-              {numberToPrice(item.price)}
+              {numberToPrice(item.price * item.quantity)}
             </span>
           )}
           {item.deliverPrice && (
-            <div className="flex gap-2">
+            <div className="flex gap-2 ml-auto">
               <Image
                 src="/Deliver.svg"
                 alt="Icono de carro de domicilio"
                 width={18}
                 height={18}
               />
-              <span className="self-end text-xs md:text-sm text-green">
+              <span className="self-end text-[10px] md:text-xs text-green">
                 {numberToPrice(item.deliverPrice)}
               </span>
             </div>

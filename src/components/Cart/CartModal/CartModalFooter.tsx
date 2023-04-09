@@ -36,13 +36,22 @@ export default function CartModalFooter({
           </span>
         </h3>
       </div>
-      <button
-        className="text-red font-bold uppercase px-0 py-2 text-xs md:px-6 md:py-2 md:text-sm border rounded border-red w-1/5 ml-auto mr-1 mb-1"
-        type="button"
-        onClick={handleCloseModal}
-      >
-        Cerrar
-      </button>
+      <div className="flex items-center justify-between py-4 px-2">
+        <button
+          className="text-red font-bold px-0 py-1 text-lg md:px-6 md:py-2 md:text-sm border rounded border-red "
+          type="button"
+          onClick={handleCloseModal}
+        >
+          Cerrar
+        </button>
+        <button
+          className="text-white bg-blue px-0 py-1 text-lg md:px-6 md:py-2 md:text-sm rounded"
+          type="button"
+          onClick={handleCloseModal}
+        >
+          Continuar compra
+        </button>
+      </div>
     </div>
   );
 }

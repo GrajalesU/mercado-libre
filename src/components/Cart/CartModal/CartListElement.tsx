@@ -52,7 +52,7 @@ export default function CartListElement({ item }: { item: CartItem }) {
     <div className="flex flex-wrap gap-8 items-center border-b border-gray-100 px-2 py-4">
       <div className="flex gap-8 items-center">
         <Image src={item.image} alt={item.name} width={50} height={50} />
-        <div className="sm:w-full w-[140px] sm:max-w-[210px] md:max-w-[250px] lg:max-w-[300px]">
+        <div className="sm:w-full w-[140px] sm:max-w-[210px] md:max-w-[240px] lg:min-w-[450px] lg:max-w-[600px]">
           <h3 className="font-bold text-lg truncate">{item.name}</h3>
         </div>
       </div>

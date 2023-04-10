@@ -6,7 +6,7 @@ export default function CartList() {
   const { state: items } = useCartContext();
   return (
     <div
-      className={`max-h-[50vh] overflow-y-auto px-4 ${scroll["custom-scroll"]}`}
+      className={`max-h-[40vh] lg:max-h-[45vh] overflow-y-auto px-4 ${scroll["custom-scroll"]}`}
     >
       {items.map((item) => (
         <CartListElement key={item.id} item={item} />

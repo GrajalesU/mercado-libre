@@ -15,7 +15,7 @@ export default function CartButton() {
 
   return (
     <>
-      <button className="absolute -right-8" onClick={handleOpenModal}>
+      <button className="absolute scale-[70%] -right-8" onClick={handleOpenModal}>
         <div className="relative">
           <Image
             src="/Cart.svg"
@@ -23,12 +23,12 @@ export default function CartButton() {
             width={30}
             height={25}
           />
-          <span className="absolute top-[1px] left-[13px] text-white text-xs">
+          <span className="absolute -top-[1.5px] left-[13px] text-white text-[13px]">
             {quantity > 9 && 9}
             {quantity > 0 && quantity < 10 && quantity}
           </span>
           {quantity > 9 && (
-            <span className="absolute -top-1 right-1 text-white text-[10px]">
+            <span className="absolute -top-1 right-1 text-white text-[11px]">
               +
             </span>
           )}

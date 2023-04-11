@@ -17,7 +17,7 @@ export default function Subscribe() {
         <span className="text-[17px]">
           Consigue los mejores beneficios en Mercado Libre
         </span>
-        <ul className="flex justify-between mt-8 mb-2">
+        <ul className="flex flex-col gap-4 md:gap-0 items-start md:flex-row justify-between mt-8 mb-2">
           <li>
             <div className="flex items-center gap-4">
               <Image
@@ -44,7 +44,7 @@ export default function Subscribe() {
             </div>
           </li>
           <li>
-            <div className="flex items-center gap-4 max-w-[330px] mr-14">
+            <div className="flex items-center gap-4 md:max-w-[330px] md:mr-14">
               <Image
                 src={"/Car.svg"}
                 alt="Disney Plus Icon"

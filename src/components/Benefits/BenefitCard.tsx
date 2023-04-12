@@ -9,6 +9,7 @@ type BenefitCardProps = {
   brand: string;
   title: string;
   freeTier?: boolean;
+  gradientColor?: string;
 };
 
 const BenefitCard = ({

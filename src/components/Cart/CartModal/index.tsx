@@ -1,7 +1,7 @@
 import React, { Dispatch, SetStateAction, useRef } from 'react';
 import animation from './styles/animation.module.css';
 import { CartModalHeader } from './CartModalHeader';
-import CartModalBody from './CartModalBody';
+import { CartModalBody } from './CartModalBody';
 import { CartModalFooter } from './CartModalFooter';
 interface CartModalProps {
   show: boolean;

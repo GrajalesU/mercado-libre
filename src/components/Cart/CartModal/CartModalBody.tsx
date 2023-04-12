@@ -1,8 +1,8 @@
 import React from 'react';
-import { CartList } from './CartList';
+import CartList from './CartList';
 import { useCartContext } from '@/context/Cart';
 
-export default function CartModalBody() {
+export const CartModalBody = () => {
   const { state: items } = useCartContext();
 
   if (items.length === 0) {
@@ -19,4 +19,4 @@ export default function CartModalBody() {
       <CartList />
     </div>
   );
-}
+};

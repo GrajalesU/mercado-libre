@@ -18,7 +18,7 @@ const roboto = Roboto({
   subsets: ['latin'],
 });
 
-export const Home = () => (
+const Home = () => (
   <>
     <Head>
       <title>Mercado Libre</title>
@@ -56,3 +56,5 @@ export const Home = () => (
     </div>
   </>
 );
+
+export default Home;

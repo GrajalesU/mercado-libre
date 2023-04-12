@@ -3,14 +3,14 @@ import {
   CartState,
   cartReducer,
   initialCartState,
-} from "@/reducers/cart";
+} from '@/reducers/cart';
 import {
   Dispatch,
   ReactNode,
   createContext,
   useContext,
   useReducer,
-} from "react";
+} from 'react';
 
 interface CartContextProps {
   state: CartState;
@@ -19,9 +19,7 @@ interface CartContextProps {
 
 const CartContext = createContext<CartContextProps>({} as CartContextProps);
 
-export const useCartContext = () => {
-  return useContext(CartContext);
-};
+export const useCartContext = () => useContext(CartContext);
 
 interface CartContextProviderProps {
   children: ReactNode;

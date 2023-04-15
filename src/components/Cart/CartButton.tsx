@@ -4,7 +4,11 @@ import React, { useState } from "react";
 import CartModal from "./CartModal";
 import { countProducts } from "@/utils/cart";
 
-export default function CartButton() {
+interface CartButtonProps{
+  p_width:number; p_height:number;
+}
+
+export default function CartButton({p_width, p_height} : CartButtonProps) {
   const { state: items } = useCartContext();
   const [show, setShow] = useState(false);
   const quantity = countProducts(items);
@@ -15,13 +19,13 @@ export default function CartButton() {
 
   return (
     <>
-      <button className="absolute scale-[70%] -right-8" onClick={handleOpenModal}>
+      <button className="scale-[70%] -right-8" onClick={handleOpenModal}>
         <div className="relative">
           <Image
             src="/Cart.svg"
             alt="Icono de carrito"
-            width={30}
-            height={25}
+            width={p_width}
+            height={p_height}
           />
           <span className="absolute -top-[1.5px] left-[13px] text-white text-[13px]">
             {quantity > 9 && 9}

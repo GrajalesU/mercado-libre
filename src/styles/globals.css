@@ -7,3 +7,25 @@
     font-family: "Roboto", sans-serif;
   }
 }
+
+.debug{
+  border: 1px red solid;
+}
+
+select{
+  border: none !important;
+  border-style: hidden;
+  
+}
+
+select:hover{
+  border: none !important;
+}
+
+img{
+  max-width: fit-content;
+}
+
+/* input{
+  min-width: 100px;
+} */

@@ -6,7 +6,7 @@ import CartButton from "../Cart/CartButton";
 
 export default function Search() {
   return (
-    <div className="debug py-4 flex lg:gap-[45px] justify-between lg:justify-start">
+    <div className="py-4 flex lg:gap-[45px] justify-between lg:justify-start">
       <Logo/>      
       <div className="flex lg:min-w-[550px] items-center rounded-sm overflow-hidden bg-white justify-between">
         <input

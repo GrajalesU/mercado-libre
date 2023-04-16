@@ -1,5 +1,5 @@
-import Nav from "./Nav";
-import Search from "./Search";
+import { Nav } from './Nav';
+import { Search } from './Search';
 
 export default function Header() {
   return (

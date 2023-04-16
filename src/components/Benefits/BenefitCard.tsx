@@ -1,5 +1,5 @@
-import Image from "next/image";
-import React from "react";
+import Image from 'next/image';
+import React from 'react';
 
 type BenefitCardProps = {
   bgSrc: string;
@@ -9,34 +9,35 @@ type BenefitCardProps = {
   brand: string;
   title: string;
   freeTier?: boolean;
+  gradientColor?: string;
 };
 
-export default function BenefitCard({
+const BenefitCard = ({
   bgSrc,
   bgAlt,
   logoSrc,
   logoAlt,
   brand,
   title,
-  freeTier,
-}: BenefitCardProps) {
-  return (
-    <article className="w-[384px] h-[250px] rounded-md overflow-hidden relative">
-      <Image
-        src={bgSrc}
-        alt={bgAlt}
-        width={384}
-        height={250}
-        className="absolute object-cover"
-      />
-      <div className="absolute z-10 flex items-center gap-4 bottom-4 left-4">
-        <Image src={logoSrc} width={80} height={80} alt={logoAlt} />
-        <div className="text-white">
-          {freeTier && <span className="text-[11px]">7 DÍAS GRATIS</span>}
-          <h3 className="font-semibold">{title}</h3>
-          <span className="font-[17px]">{brand}</span>
-        </div>
+  freeTier = false,
+}: BenefitCardProps) => (
+  <article className='relative h-[250px] w-[384px] overflow-hidden rounded-md'>
+    <Image
+      src={bgSrc}
+      alt={bgAlt}
+      width={384}
+      height={250}
+      className='absolute object-cover'
+    />
+    <div className='absolute bottom-4 left-4 z-10 flex items-center gap-4'>
+      <Image src={logoSrc} width={80} height={80} alt={logoAlt} />
+      <div className='text-white'>
+        {freeTier && <span className='text-[11px]'>7 DÍAS GRATIS</span>}
+        <h3 className='font-semibold'>{title}</h3>
+        <span className='font-[17px]'>{brand}</span>
       </div>
-    </article>
-  );
-}
+    </div>
+  </article>
+);
+
+export default BenefitCard;

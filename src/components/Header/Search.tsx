@@ -22,7 +22,6 @@ export default function Search() {
         <MdMenu className="text-[40px]"/>
         <CartButton p_height={25} p_width={45}/>
       </div>
-      
     </div>
-  );
-}
+  </div>
+);

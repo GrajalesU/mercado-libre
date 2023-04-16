@@ -1,4 +1,4 @@
-import { Product } from "@/types/Product";
+import { Product } from '@/types/Product';
 import {
   ADD_TO_CART,
   CLEAR_CART,
@@ -6,8 +6,8 @@ import {
   INCREASE_QUANTITY,
   REMOVE_FROM_CART,
   SET_QUANTITY,
-} from "./types";
-import { CartItem } from "@/types/Cart";
+} from './types';
+import { CartItem } from '@/types/Cart';
 
 type AddToCartAction = {
   type: typeof ADD_TO_CART;

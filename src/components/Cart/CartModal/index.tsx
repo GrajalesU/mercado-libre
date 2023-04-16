@@ -1,18 +1,18 @@
-import React, { Dispatch, SetStateAction, useRef } from 'react';
-import animation from './styles/animation.module.css';
-import { CartModalHeader } from './CartModalHeader';
-import { CartModalBody } from './CartModalBody';
-import { CartModalFooter } from './CartModalFooter';
+import React, { Dispatch, SetStateAction, useRef } from "react";
+import animation from "./styles/animation.module.css";
+import CartModalHeader from "./CartModalHeader";
+import CartModalBody from "./CartModalBody";
+import CartModalFooter from "./CartModalFooter";
 interface CartModalProps {
   show: boolean;
   setShow: Dispatch<SetStateAction<boolean>>;
 }
 
-export const CartModal = ({ show, setShow }: CartModalProps) => {
+export default function CartModal({ show, setShow }: CartModalProps) {
   const modalRef = useRef<HTMLDivElement | null>(null);
 
   const handleCloseModal = () => {
-    modalRef.current?.classList.add(animation['fade-out-up']);
+    modalRef.current?.classList.add(animation["fade-out-up"]);
     setTimeout(() => {
       setShow(false);
     }, 500);
@@ -24,17 +24,17 @@ export const CartModal = ({ show, setShow }: CartModalProps) => {
     <>
       <div
         ref={modalRef}
-        className={`fixed inset-0 z-50 flex items-center justify-center overflow-y-auto overflow-x-hidden outline-none focus:outline-none ${animation['fade-in-down']}`}
+        className={`justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none ${animation["fade-in-down"]}`}
       >
-        <div className='relative mx-auto w-auto max-w-6xl'>
-          <div className='relative flex w-full flex-col rounded-lg border-0 bg-white shadow-lg outline-none focus:outline-none'>
+        <div className="relative w-auto mx-auto max-w-6xl">
+          <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
             <CartModalHeader handleCloseModal={handleCloseModal} />
             <CartModalBody />
             <CartModalFooter handleCloseModal={handleCloseModal} />
           </div>
         </div>
       </div>
-      <div className='fixed inset-0 z-40 bg-black opacity-25'></div>
+      <div className="opacity-25 fixed inset-0 z-40 bg-black"></div>
     </>
   );
-};
+}

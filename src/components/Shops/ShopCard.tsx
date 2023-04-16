@@ -1,6 +1,6 @@
-import Image from 'next/image';
-import React from 'react';
-import { ShopItemsProps, ShopItems } from './ShopItems';
+import Image from "next/image";
+import React from "react";
+import ShopItems, { ShopItemsProps } from "./ShopItems";
 
 type ShopCardProps = {
   items: ShopItemsProps;
@@ -10,32 +10,32 @@ type ShopCardProps = {
   srcLogo: string;
 };
 
-export const ShopCard = ({
+export default function ShopCard({
   items,
   brand,
   srcBg,
   altBg,
   srcLogo,
-}: ShopCardProps) => (
-  <article className='relative flex w-[284px] flex-col items-center overflow-hidden rounded bg-white shadow-sm'>
-    <Image
-      src={srcBg}
-      alt={altBg}
-      width={390}
-      height={95}
-      className='mb-14 object-contain'
-    />
-    <div className='absolute top-[55px] cursor-auto overflow-hidden rounded-lg bg-white shadow-lg'>
-      <Image src={srcLogo} alt={`${brand} Logo`} width={80} height={80} />
-    </div>
-    <div className='flex flex-col items-center gap-5 px-8 pb-5'>
-      <h3 className='cursor-pointer text-2xl font-semibold text-black'>
-        {brand}
-      </h3>
-      <ShopItems {...items} />
-      <span className='cursor-pointer font-semibold text-gray-200'>
-        Ver tienda
-      </span>
-    </div>
-  </article>
-);
+}: ShopCardProps) {
+  return (
+    <article className="w-[284px] bg-white rounded overflow-hidden flex flex-col items-center relative shadow-sm">
+      <Image
+        src={srcBg}
+        alt={altBg}
+        width={390}
+        height={95}
+        className="object-contain mb-14"
+      />
+      <div className="absolute top-[55px] bg-white rounded-lg shadow-lg overflow-hidden cursor-auto">
+        <Image src={srcLogo} alt={`${brand} Logo`} width={80} height={80} />
+      </div>
+      <div className="flex flex-col items-center gap-5 px-8 pb-5">
+        <h3 className="text-2xl text-black font-semibold cursor-pointer">{brand}</h3>
+        <ShopItems {...items} />
+        <span className="font-semibold text-gray-200 cursor-pointer">
+          Ver tienda
+        </span>
+      </div>
+    </article>
+  );
+}

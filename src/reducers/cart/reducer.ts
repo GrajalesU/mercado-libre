@@ -1,4 +1,4 @@
-import { CartItem } from '@/types/Cart';
+import { CartItem } from "@/types/Cart";
 import {
   ADD_TO_CART,
   CLEAR_CART,
@@ -6,8 +6,8 @@ import {
   INCREASE_QUANTITY,
   REMOVE_FROM_CART,
   SET_QUANTITY,
-} from './types';
-import { CartAction } from './actions';
+} from "./types";
+import { CartAction } from "./actions";
 
 export type CartState = CartItem[];
 

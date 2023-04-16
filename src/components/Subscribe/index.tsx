@@ -1,14 +1,21 @@
-import Image from 'next/image';
-import React from 'react';
+import Image from "next/image";
+import React from "react";
 
-export const Subscribe = () => (
-  <section className='mb-20 overflow-hidden rounded-md bg-white shadow-sm'>
-    <header className='flex items-center justify-between bg-gradient-to-r from-[#A90F90] to-[#0C1A51] p-6 text-white'>
-      <h2 className='text-2xl font-bold'>Suscríbete al nivel 6</h2>
-      <div className='flex flex-col border-l-2 border-l-white pl-[6px]'>
-        <span className='text-sm font-medium line-through'>$ 50.690</span>
-        <span className='text-xl font-semibold'>
-          $ 17.899 <small className='ml-1'>/mes</small>
+export default function Subscribe() {
+  return (
+    <section className="mb-20 overflow-hidden bg-white rounded-md shadow-sm">
+      <header className="p-6 bg-gradient-to-r from-[#A90F90] to-[#0C1A51] text-white flex justify-between items-center">
+        <h2 className="text-2xl font-bold">Suscríbete al nivel 6</h2>
+        <div className="flex flex-col border-l-2 border-l-white pl-[6px]">
+          <span className="text-sm font-medium line-through">$ 50.690</span>
+          <span className="text-xl font-semibold">
+            $ 17.899 <small className="ml-1">/mes</small>
+          </span>
+        </div>
+      </header>
+      <main className="px-6 py-5 border-b border-b-gray-100">
+        <span className="text-[17px]">
+          Consigue los mejores beneficios en Mercado Libre
         </span>
         <ul className="flex flex-col gap-4 md:gap-0 items-start md:flex-row justify-between mt-8 mb-2">
           <li>

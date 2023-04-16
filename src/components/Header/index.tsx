@@ -1,11 +1,13 @@
-import { Nav } from './Nav';
-import { Search } from './Search';
+import Nav from "./Nav";
+import Search from "./Search";
 
-export const Header = () => (
-  <header className='bg-yellow'>
-    <div className='mx-auto max-w-[1184px] pb-2'>
-      <Search />
-      <Nav />
-    </div>
-  </header>
-);
+export default function Header() {
+  return (
+    <header className="bg-yellow">
+      <div className="max-w-[1184px] mx-auto pb-2">
+        <Search />
+        <Nav />
+      </div>
+    </header>
+  );
+}

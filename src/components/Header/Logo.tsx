@@ -1,5 +1,7 @@
-import Image from 'next/image';
+import Image from "next/image";
 
-export const Logo = () => (
-  <Image src='/logo.svg' alt='Mercado Libre Logo' width={134} height={34} />
-);
+export default function Logo() {
+  return (
+    <Image src="/logo.svg" alt="Mercado Libre Logo" width={134} height={34} />
+  );
+}

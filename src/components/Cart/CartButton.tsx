@@ -8,7 +8,7 @@ interface CartButtonProps{
   p_width:number; p_height:number;
 }
 
-export default function CartButton({p_width, p_height} : CartButtonProps) {
+const CartButton = ({p_width, p_height} : CartButtonProps) => {
   const { state: items } = useCartContext();
   const [show, setShow] = useState(false);
   const quantity = countProducts(items);
@@ -42,3 +42,5 @@ export default function CartButton({p_width, p_height} : CartButtonProps) {
     </>
   );
 }
+
+export {CartButton}; 

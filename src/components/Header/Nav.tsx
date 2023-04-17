@@ -1,4 +1,4 @@
-import CartButton  from '@/components/Cart/CartButton';
+import {CartButton}  from '@/components/Cart/CartButton';
 
 export const Nav = () => (
   <div className="flex text-black pb-1 font-normal text-sm items-center gap-[45px] relative">

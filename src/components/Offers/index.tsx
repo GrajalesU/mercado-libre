@@ -2,6 +2,8 @@ import React from 'react';
 import { OfferCard } from './OfferCard';
 import { PRODUCTS } from '@/db/products';
 import { WithCardAddition } from '@/components/HOC/WithCardAddition';
+import Slider from 'react-slick';
+import { OFFER_SLIDER_SETTINGS } from './constants';
 
 export const Offers = () => (
   <section className='mt-[50px] mb-20'>
@@ -11,9 +13,9 @@ export const Offers = () => (
         Ver todas
       </span>
     </div>
-    <ul className='flex justify-between'>
+    <Slider {...OFFER_SLIDER_SETTINGS} className='group'>
       {PRODUCTS.map((product) => (
-        <li key={`Product_${product.id}`}>
+        <div key={`Product_${product.id}`} className='mx-auto'>
           <WithCardAddition product={product}>
             <OfferCard
               free={!product.deliverPrice}
@@ -23,8 +25,8 @@ export const Offers = () => (
               src={product.image}
             />
           </WithCardAddition>
-        </li>
+        </div>
       ))}
-    </ul>
+    </Slider>
   </section>
 );

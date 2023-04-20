@@ -6,7 +6,7 @@ export const Footer = () => (
     <footer className='pb-[50px]'>
       <div className='border-b border-b-gray-100 pb-3'>
         <nav>
-          <ul className='mb-[7px] flex gap-5 text-xs text-black'>
+          <ul className='my-[25px] lg:my-[7px] grid grid-cols-2 gap-5 text-xs text-black lg:flex'>
             <li>Trabaja con nosotros</li>
             <li>Términos y condiciones</li>
             <li>Cómo cuidamos tu privacidad</li>
@@ -22,7 +22,7 @@ export const Footer = () => (
           Carrera 17 Numero 93 - 09 Piso 3, Bogotá D.C., Colombia
         </span>
       </div>
-      <div className='flex gap-5 pt-5'>
+      <div className='flex gap-5 pt-10 flex-col lg:flex-row'>
         <Image
           src='/sic.png'
           alt='Superintendencia de industria y comercio'

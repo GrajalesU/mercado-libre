@@ -23,8 +23,8 @@ export const Collections = () => (
           />
         </div>
       </div>
-      <div className='grid grid-cols-6 grid-rows-2 gap-4'>
-        <div className='col-span-2 row-span-2 overflow-hidden rounded bg-white shadow-sm'>
+      <div className='grid grid-cols-2 lg:grid-cols-6 lg:grid-rows-2 gap-4'>
+        <div className='hidden lg:block col-span-2 row-span-2 overflow-hidden rounded bg-white shadow-sm'>
           <Image
             src='/collections/Collections-1.png'
             alt='Cuido, detergente, pañales y diversos tipos de productos de un mercado'
@@ -93,7 +93,7 @@ export const Collections = () => (
             className='w-full'
           />
         </div>
-        <div className='rounded bg-white shadow-sm'>
+        <div className='hidden lg:block rounded bg-white shadow-sm'>
           <Image
             src='/collections/Collections-8.png'
             alt='Crema intensiva corporal Eucerin'
@@ -102,7 +102,7 @@ export const Collections = () => (
             className='w-full'
           />
         </div>
-        <div className='rounded bg-white shadow-sm'>
+        <div className='hidden lg:block rounded bg-white shadow-sm'>
           <Image
             src='/collections/Collections-9.png'
             alt='Shampoo Tío Nacho'
@@ -111,6 +111,10 @@ export const Collections = () => (
             className='w-full'
           />
         </div>
+
+      </div>
+      <div className='lg:hidden mt-4 flex rounded bg-white shadow-sm justify-center py-4'>
+        <span className='text-[20px] font-normal text-blue'>Descubre más</span>
       </div>
     </div>
   </section>

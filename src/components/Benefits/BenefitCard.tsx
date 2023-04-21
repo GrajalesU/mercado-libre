@@ -21,7 +21,7 @@ const BenefitCard = ({
   title,
   freeTier = false,
 }: BenefitCardProps) => (
-  <article className='relative h-[250px] w-[384px] overflow-hidden rounded-md'>
+  <article className='relative h-[250px] overflow-hidden rounded-md px-1'>
     <Image
       src={bgSrc}
       alt={bgAlt}

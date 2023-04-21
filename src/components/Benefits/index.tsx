@@ -1,5 +1,7 @@
 import React from 'react';
 import BenefitCard from './BenefitCard';
+import Slider from 'react-slick';
+import { BENEFITS_SLIDER_SETTINGS } from './constants';
 
 const Benefits = () => (
   <section className='mb-20'>
@@ -11,40 +13,34 @@ const Benefits = () => (
         Ver todos los beneficios
       </span>
     </div>
-    <ul className='flex justify-between'>
-      <li>
-        <BenefitCard
-          bgSrc='/benefits/DisneyAndStarBg.png'
-          bgAlt='Disney Plus and Star Plus Series'
-          logoSrc='/benefits/DisneyAndStarLogo.png'
-          logoAlt='Disney Plus and Star Plus Logo'
-          title='Sin cargo con el nivel 6'
-          brand='Disney+ y Star+'
-        />
-      </li>
-      <li>
-        <BenefitCard
-          bgSrc='/benefits/HBOMaxBg.png'
-          bgAlt='HBO Max Series'
-          logoSrc='/benefits/HBOMaxLogo.png'
-          logoAlt='HBO Max Logo'
-          title='Hasta 50% OFF'
-          brand='HBO Max'
-          freeTier
-        />
-      </li>
-      <li>
-        <BenefitCard
-          bgSrc='/benefits/ParamountBg.png'
-          bgAlt='Paramount Series'
-          logoSrc='/benefits/ParamountLogo.png'
-          logoAlt='Paramount Logo'
-          title='Hasta 50% OFF'
-          brand='Paramount+'
-          freeTier
-        />
-      </li>
-    </ul>
+    <Slider {...BENEFITS_SLIDER_SETTINGS} className=''>
+      <BenefitCard
+        bgSrc='/benefits/DisneyAndStarBg.png'
+        bgAlt='Disney Plus and Star Plus Series'
+        logoSrc='/benefits/DisneyAndStarLogo.png'
+        logoAlt='Disney Plus and Star Plus Logo'
+        title='Sin cargo con el nivel 6'
+        brand='Disney+ y Star+'
+      />
+      <BenefitCard
+        bgSrc='/benefits/HBOMaxBg.png'
+        bgAlt='HBO Max Series'
+        logoSrc='/benefits/HBOMaxLogo.png'
+        logoAlt='HBO Max Logo'
+        title='Hasta 50% OFF'
+        brand='HBO Max'
+        freeTier
+      />
+      <BenefitCard
+        bgSrc='/benefits/ParamountBg.png'
+        bgAlt='Paramount Series'
+        logoSrc='/benefits/ParamountLogo.png'
+        logoAlt='Paramount Logo'
+        title='Hasta 50% OFF'
+        brand='Paramount+'
+        freeTier
+      />
+    </Slider>
   </section>
 );
 

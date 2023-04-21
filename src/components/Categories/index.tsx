@@ -6,7 +6,7 @@ export const Categories = () => (
     <h2 className='mb-6 gap-x-1 gap-y-1 text-[25px] font-light text-gray-300'>
       Categorías populares
     </h2>
-    <ul className='grid grid-cols-7 grid-rows-2 overflow-hidden rounded shadow-sm'>
+    <ul className='grid grid-cols-2 gap-4 lg:gap-0 lg:grid-cols-7 lg:grid-rows-2 overflow-hidden rounded shadow-sm'>
       <li>
         <CategoryItem
           src='/categories/categories-1.svg'
@@ -49,56 +49,56 @@ export const Categories = () => (
           description='Electrodomésticos'
         />
       </li>
-      <li>
+      <li className='hidden lg:block'>
         <CategoryItem
           src='/categories/categories-7.svg'
           alt='Cámara'
           description='Cámaras y Accesorios'
         />
       </li>
-      <li>
+      <li className='hidden lg:block'>
         <CategoryItem
           src='/categories/categories-8.svg'
           alt='Smartphone'
           description='Celulares y Teléfonos'
         />
       </li>
-      <li>
+      <li className='hidden lg:block'>
         <CategoryItem
           src='/categories/categories-9.svg'
           alt='Labial'
           description='Belleza y Cuidado Personal'
         />
       </li>
-      <li>
+      <li className='hidden lg:block'>
         <CategoryItem
           src='/categories/categories-10.svg'
           alt='Balón de futbol'
           description='Deportes y Fitness'
         />
       </li>
-      <li>
+      <li className='hidden lg:block'>
         <CategoryItem
           src='/categories/categories-11.svg'
           alt='Micrófono'
           description='Electrónica, Audio y Video'
         />
       </li>
-      <li>
+      <li className='hidden lg:block'>
         <CategoryItem
           src='/categories/categories-12.svg'
           alt='Control'
           description='Consolas y Videojuegos'
         />
       </li>
-      <li>
+      <li className='hidden lg:block'>
         <CategoryItem
           src='/categories/categories-13.svg'
           alt='Oso de peluche'
           description='Juegos y Juguetes'
         />
       </li>
-      <li>
+      <li className='hidden lg:block'>
         <CategoryItem
           src='/categories/categories-14.svg'
           alt='Llave plana'
@@ -106,5 +106,8 @@ export const Categories = () => (
         />
       </li>
     </ul>
+    <div className='lg:hidden mt-4 flex rounded bg-white shadow-sm justify-center py-4'>
+      <span className='text-[20px] font-normal text-blue'>Descubre más</span>
+    </div>
   </section>
 );

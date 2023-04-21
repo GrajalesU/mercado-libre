@@ -4,9 +4,9 @@ import React from 'react';
 export const Discover = () => (
   <section className='mb-20'>
     <h2 className='mb-6 text-[25px] font-light text-gray-300'>Descubre</h2>
-    <ul className='flex justify-between'>
-      <li>
-        <article className='flex max-w-[584px] items-center gap-8 overflow-hidden rounded bg-white shadow-sm'>
+    <ul className='grid grid-cols-1 lg:grid-cols-2'>
+      <li className='my-2 mr-2'>
+        <article className='shadow-sm flex max-w-[584px] items-center gap-8 overflow-hidden rounded bg-white'>
           <div className='flex w-full flex-col gap-3 py-4 pl-4 font-semibold text-gray-400'>
             <h3 className=' text-[12px] tracking-[4px]'>
               RENUEVA TUS ESPACIOS
@@ -27,8 +27,8 @@ export const Discover = () => (
           />
         </article>
       </li>
-      <li>
-        <article className='flex max-w-[584px] items-center gap-8 overflow-hidden rounded bg-white shadow-sm'>
+      <li className='my-2'>
+        <article className='shadow-sm flex max-w-[584px] items-center gap-8 overflow-hidden rounded bg-white'>
           <div className='flex w-full grow flex-col gap-3 py-4 pl-4 font-semibold text-gray-400'>
             <h3 className=' text-[12px] tracking-[4px]'>
               SUSCRÍBETE AL NIVEL 6

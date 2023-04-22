@@ -43,7 +43,7 @@ const Home = () => (
       <Header />
       <main>
         <Carrousel />
-        <div className='mx-auto max-w-[1184px]'>
+        <div className='px-3 lg:px-0 mx-auto max-w-[1184px]'>
           <PaymentMethods />
           <Offers />
           <Subscribe />
@@ -52,13 +52,13 @@ const Home = () => (
           <Shops />
         </div>
         <div className=' bg-gradient-to-b from-[#E6E6E6] to-[#ffffff00]'>
-          <div className='mx-auto max-w-[1184px]'>
+          <div className='px-3 lg:px-0 mx-auto max-w-[1184px]'>
             <Collections />
             <Categories />
           </div>
         </div>
-        <div className='border-b border-b-gray-100 bg-white'>
-          <div className='mx-auto max-w-[1184px]'>
+        <div className='bg-white border-b border-b-gray-100'>
+          <div className='px-3 lg:px-0 mx-auto max-w-[1184px]'>
             <PaymentAndSecurityInfo />
           </div>
         </div>

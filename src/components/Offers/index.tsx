@@ -7,8 +7,10 @@ import { OFFER_SLIDER_SETTINGS } from './constants';
 
 export const Offers = () => (
   <section className='mt-[50px] mb-20'>
-    <div className='mb-[22px] flex items-end gap-[16.38px]'>
-      <h2 className='text-[25px] font-light text-gray-300'>Ofertas</h2>
+    <div className='mb-4 flex items-end gap-[16.38px] lg:mb-[22px]'>
+      <h2 className='text-xl font-light text-gray-300 lg:text-[25px]'>
+        Ofertas
+      </h2>
       <span className='mb-[7px] cursor-pointer text-[15px] font-normal leading-5 text-blue'>
         Ver todas
       </span>

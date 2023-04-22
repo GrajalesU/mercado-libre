@@ -49,20 +49,20 @@ const CartListElement = ({ item }: { item: CartItem }) => {
   };
 
   return (
-    <div className='flex flex-wrap items-center gap-8 border-b border-gray-100 px-2 py-4'>
+    <div className='flex flex-wrap items-center gap-8 px-2 py-4 border-b border-gray-100'>
       <div className='flex items-center gap-8'>
         <Image src={item.image} alt={item.name} width={50} height={50} />
-        <div className='w-[140px] sm:w-full sm:max-w-[210px] md:max-w-[240px] lg:min-w-[450px] lg:max-w-[600px]'>
-          <h3 className='truncate text-lg font-bold'>{item.name}</h3>
+        <div className='w-[140px] sm:w-full sm:max-w-[210px] lg:min-w-[450px] lg:max-w-[600px]'>
+          <h3 className='text-lg font-bold truncate'>{item.name}</h3>
         </div>
       </div>
-      <div className='ml-auto flex gap-8'>
-        <div className='flex items-center gap-2 md:gap-8'>
+      <div className='flex gap-8 ml-auto'>
+        <div className='flex items-center gap-2 lg:gap-8'>
           <div className='relative'>
-            <div className='flex gap-2 rounded border border-gray-100 p-1 text-xs text-blue md:p-2 md:text-sm'>
+            <div className='flex gap-2 p-1 text-xs border border-gray-100 rounded text-blue lg:p-2 lg:text-sm'>
               <button onClick={handleDecrease}>-</button>
               <input
-                className={`w-10 text-center text-xs text-black md:text-lg ${input['appearance-none']}`}
+                className={`w-10 text-center text-xs text-black lg:text-lg ${input['appearance-none']}`}
                 value={item.quantity}
                 min={1}
                 max={product.stock}
@@ -82,13 +82,13 @@ const CartListElement = ({ item }: { item: CartItem }) => {
               width={20}
               height={20}
               alt='Eliminar'
-              className='h-4 w-4 md:h-5 md:w-5'
+              className='w-6 h-6 lg:h-5 lg:w-5'
             />
           </button>
         </div>
-        <div className='flex w-28 flex-col md:ml-auto'>
+        <div className='flex flex-col w-28 lg:ml-auto'>
           {item.offer && (
-            <div className='ml-auto flex gap-2 text-[10px] md:text-xs'>
+            <div className='ml-auto flex gap-2 text-[10px] lg:text-xs'>
               <span className='text-green'>{item.offer} %</span>
               <span className='line-through'>
                 {numberToPrice(item.price * item.quantity)}
@@ -96,23 +96,23 @@ const CartListElement = ({ item }: { item: CartItem }) => {
             </div>
           )}
           {item.priceWithOffer ? (
-            <span className='self-end font-semibold md:text-lg'>
+            <span className='self-end font-semibold lg:text-lg'>
               {numberToPrice(item.priceWithOffer * item.quantity)}
             </span>
           ) : (
-            <span className='self-end font-semibold md:text-lg'>
+            <span className='self-end font-semibold lg:text-lg'>
               {numberToPrice(item.price * item.quantity)}
             </span>
           )}
           {item.deliverPrice && (
-            <div className='ml-auto flex gap-2'>
+            <div className='flex gap-2 ml-auto'>
               <Image
                 src='/Deliver.svg'
                 alt='Icono de carro de domicilio'
                 width={18}
                 height={18}
               />
-              <span className='self-end text-[10px] text-green md:text-xs'>
+              <span className='self-end text-[10px] text-green lg:text-xs'>
                 {numberToPrice(item.deliverPrice)}
               </span>
             </div>

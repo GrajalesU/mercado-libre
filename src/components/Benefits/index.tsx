@@ -5,15 +5,15 @@ import { BENEFITS_SLIDER_SETTINGS } from './constants';
 
 const Benefits = () => (
   <section className='mb-20'>
-    <div className='mb-[22px] flex items-end gap-[16.38px]'>
-      <h2 className='text-[25px] font-light text-gray-300'>
+    <div className='mb-4 flex items-end gap-[16.38px] lg:mb-[22px]'>
+      <h2 className='text-xl font-light text-gray-300 lg:text-[25px]'>
         Beneficios de Mercado Puntos
       </h2>
       <span className='mb-[7px] cursor-pointer text-[15px] font-normal leading-5 text-blue'>
         Ver todos los beneficios
       </span>
     </div>
-    <Slider {...BENEFITS_SLIDER_SETTINGS} className=''>
+    <Slider {...BENEFITS_SLIDER_SETTINGS}>
       <BenefitCard
         bgSrc='/benefits/DisneyAndStarBg.png'
         bgAlt='Disney Plus and Star Plus Series'
@@ -21,6 +21,7 @@ const Benefits = () => (
         logoAlt='Disney Plus and Star Plus Logo'
         title='Sin cargo con el nivel 6'
         brand='Disney+ y Star+'
+        gradientColor='#081330'
       />
       <BenefitCard
         bgSrc='/benefits/HBOMaxBg.png'
@@ -29,6 +30,7 @@ const Benefits = () => (
         logoAlt='HBO Max Logo'
         title='Hasta 50% OFF'
         brand='HBO Max'
+        gradientColor='#3C034E'
         freeTier
       />
       <BenefitCard
@@ -38,6 +40,7 @@ const Benefits = () => (
         logoAlt='Paramount Logo'
         title='Hasta 50% OFF'
         brand='Paramount+'
+        gradientColor='#0064FF'
         freeTier
       />
     </Slider>

@@ -3,10 +3,10 @@ import { CategoryItem } from './CategoryItem';
 
 export const Categories = () => (
   <section className='mt-20 mb-5'>
-    <h2 className='mb-6 gap-x-1 gap-y-1 text-[25px] font-light text-gray-300'>
+    <h2 className='mb-6 gap-x-1 gap-y-1 text-xl font-light text-gray-300 lg:text-[25px]'>
       Categorías populares
     </h2>
-    <ul className='grid grid-cols-2 gap-4 lg:gap-0 lg:grid-cols-7 lg:grid-rows-2 overflow-hidden rounded shadow-sm'>
+    <ul className='grid grid-cols-2 gap-4 overflow-hidden rounded shadow-sm lg:grid-cols-7 lg:grid-rows-2 lg:gap-0'>
       <li>
         <CategoryItem
           src='/categories/categories-1.svg'
@@ -106,8 +106,10 @@ export const Categories = () => (
         />
       </li>
     </ul>
-    <div className='lg:hidden mt-4 flex rounded bg-white shadow-sm justify-center py-4'>
-      <span className='text-[20px] font-normal text-blue'>Descubre más</span>
+    <div className='flex justify-center py-4 mt-4 bg-white rounded shadow-sm lg:hidden'>
+      <span className='text-lg font-normal text-blue lg:text-[20px]'>
+        Descubre más
+      </span>
     </div>
   </section>
 );

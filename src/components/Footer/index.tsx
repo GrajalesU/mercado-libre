@@ -2,9 +2,9 @@ import Image from 'next/image';
 import React from 'react';
 
 export const Footer = () => (
-  <div className='mx-auto max-w-[1184px] bg-white pt-4'>
+  <div className='px-3 lg:px-0 mx-auto max-w-[1184px] bg-white pt-4'>
     <footer className='pb-[50px]'>
-      <div className='border-b border-b-gray-100 pb-3'>
+      <div className='pb-3 border-b border-b-gray-100'>
         <nav>
           <ul className='my-[25px] lg:my-[7px] grid grid-cols-2 gap-5 text-xs text-black lg:flex'>
             <li>Trabaja con nosotros</li>
@@ -22,7 +22,7 @@ export const Footer = () => (
           Carrera 17 Numero 93 - 09 Piso 3, Bogotá D.C., Colombia
         </span>
       </div>
-      <div className='flex gap-5 pt-10 flex-col lg:flex-row'>
+      <div className='flex flex-col gap-5 pt-10 lg:flex-row'>
         <Image
           src='/sic.png'
           alt='Superintendencia de industria y comercio'

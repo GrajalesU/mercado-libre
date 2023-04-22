@@ -1,4 +1,6 @@
-export const BENEFITS_SLIDER_SETTINGS = {
+import { Settings } from "react-slick";
+
+export const BENEFITS_SLIDER_SETTINGS: Settings = {
   infinite: true,
   speed: 1000,
   slidesToShow: 3,
@@ -41,6 +43,8 @@ export const BENEFITS_SLIDER_SETTINGS = {
       settings: {
         slidesToShow: 1,
         slidesToScroll: 1,
+        centerMode: true,
+        centerPadding: "-15px",
         dots: true,
         nextArrow: <></>,
         prevArrow: <></>,

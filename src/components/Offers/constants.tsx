@@ -1,6 +1,7 @@
 import SliderArrow from '@/components/SliderArrow';
+import { Settings } from 'react-slick';
 
-export const OFFER_SLIDER_SETTINGS = {
+export const OFFER_SLIDER_SETTINGS: Settings = {
   infinite: true,
   speed: 1000,
   slidesToShow: 5,
@@ -45,6 +46,8 @@ export const OFFER_SLIDER_SETTINGS = {
       settings: {
         slidesToShow: 1,
         slidesToScroll: 1,
+        centerMode: true,
+        centerPadding: '30px',
         dots: true,
         nextArrow: <></>,
         prevArrow: <></>,

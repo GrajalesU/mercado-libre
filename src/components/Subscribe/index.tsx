@@ -2,7 +2,7 @@ import Image from 'next/image';
 import React from 'react';
 
 export const Subscribe = () => (
-  <section className='mb-20 overflow-hidden bg-white rounded-md shadow-sm'>
+  <section className='overflow-hidden bg-white rounded-md shadow-sm mb-9 lg:mb-20'>
     <header className='flex items-center justify-between bg-gradient-to-r from-[#A90F90] to-[#0C1A51] p-6 text-white'>
       <h2 className='text-2xl font-bold'>Suscríbete al nivel 6</h2>
       <div className='flex flex-col border-l-2 border-l-white pl-[6px]'>

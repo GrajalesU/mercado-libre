@@ -13,7 +13,7 @@ export const Search = () => (
         type='text'
         placeholder='Buscar productos, marcas y más...'
       />
-      <button className='border-l border-l-gray-100 px-3 py-2'>
+      <button className='px-3 py-2 border-l border-l-gray-100'>
         <Image
           className='max-w-fit'
           src='/search.svg'
@@ -23,7 +23,7 @@ export const Search = () => (
         />
       </button>
     </div>
-    <div className='flex items-center justify-end pl-[10px] lg:hidden'>
+    <div className='flex items-center grow min-w-[90px] justify-end pl-[10px] lg:hidden'>
       <MdMenu className='text-[40px]' />
       <CartButton p_height={25} p_width={45} />
     </div>

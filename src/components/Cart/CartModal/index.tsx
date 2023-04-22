@@ -24,10 +24,10 @@ export const CartModal = ({ show, setShow }: CartModalProps) => {
     <>
       <div
         ref={modalRef}
-        className={`fixed inset-0 z-50 flex items-center justify-center overflow-y-auto overflow-x-hidden outline-none focus:outline-none ${animation['fade-in-down']}`}
+        className={`fixed inset-0 z-50 mx-2 flex items-center justify-center overflow-y-auto overflow-x-hidden outline-none focus:outline-none ${animation['fade-in-down']}`}
       >
-        <div className='relative mx-auto w-auto max-w-6xl'>
-          <div className='relative flex w-full flex-col rounded-lg border-0 bg-white shadow-lg outline-none focus:outline-none'>
+        <div className='relative w-auto max-w-6xl mx-auto'>
+          <div className='relative flex flex-col w-full bg-white border-0 rounded-lg shadow-lg outline-none focus:outline-none'>
             <CartModalHeader handleCloseModal={handleCloseModal} />
             <CartModalBody />
             <CartModalFooter handleCloseModal={handleCloseModal} />

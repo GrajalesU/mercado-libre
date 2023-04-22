@@ -2,7 +2,7 @@ import Image from 'next/image';
 import React from 'react';
 
 export const Subscribe = () => (
-  <section className='mb-20 overflow-hidden rounded-md bg-white shadow-sm'>
+  <section className='mb-20 overflow-hidden bg-white rounded-md shadow-sm'>
     <header className='flex items-center justify-between bg-gradient-to-r from-[#A90F90] to-[#0C1A51] p-6 text-white'>
       <h2 className='text-2xl font-bold'>Suscríbete al nivel 6</h2>
       <div className='flex flex-col border-l-2 border-l-white pl-[6px]'>
@@ -12,11 +12,11 @@ export const Subscribe = () => (
         </span>
       </div>
     </header>
-    <main className='border-b border-b-gray-100 px-6 py-5'>
+    <main className='px-6 py-5 border-b border-b-gray-100'>
       <span className='text-[17px]'>
         Consigue los mejores beneficios en Mercado Libre
       </span>
-      <ul className='mt-8 mb-2 flex justify-between'>
+      <ul className='flex flex-col items-start justify-between gap-4 mt-8 mb-2 lg:flex-row lg:gap-0'>
         <li>
           <div className='flex items-center gap-4'>
             <Image
@@ -42,7 +42,7 @@ export const Subscribe = () => (
           </div>
         </li>
         <li>
-          <div className='mr-14 flex max-w-[330px] items-center gap-4'>
+          <div className='flex items-center gap-4 lg:mr-14 lg:max-w-[330px]'>
             <Image
               src={'/Car.svg'}
               alt='Disney Plus Icon'
@@ -57,9 +57,10 @@ export const Subscribe = () => (
         </li>
       </ul>
     </main>
-    <footer className='flex justify-end px-[30px] py-4'>
-      <button className='rounded-md bg-blue px-6 py-3 font-semibold text-white'>
+    <footer className='flex justify-end px-3 lg:px-[30px] py-4'>
+      <button className='flex justify-between w-full px-6 py-3 font-semibold text-left bg-transparent rounded-md text-blue lg:w-auto lg:bg-blue lg:text-center lg:text-white'>
         Suscríbete
+        <span className='scale-y-50 -rotate-90 lg:hidden'>V</span>
       </button>
     </footer>
   </section>
